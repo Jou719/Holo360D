@@ -29,56 +29,48 @@ Key characteristics (from the paper):
 - A benchmark setup for model fine-tuning and evaluation.
 
 ## 📦 Dataset Structure
-
-Below is the current on-disk structure under:
-`/hpc2hdd/home/jluo223/oujing/datasets/Holo360D/`
-
-```text
+```
 Holo360D/
 ├── train/
-│   ├── Indoor_scenes/
-│   │   ├── Indoor_xxx/
-│   │   │   ├── rgb/                # panoramic RGB images (.jpg)
-│   │   │   ├── depth/              # depth maps (.exr)
-│   │   │   ├── mask/               # masks (.jpg)
-│   │   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
-│   │   │   └── poses/              # camera poses (.txt)
-│   │   ├── Indoor_002/
-│   │   └── ...
-│   └── Outdoor_scenes/
-│       ├── Outdoor_xxx/
-│       │   ├── rgb/                # panoramic RGB images (.jpg)
-│       │   ├── depth/
-│       │   │   ├── mesh_depth/             # depth maps (.exr)
-│       │   │   ├── pointcloud_depth/       # depth maps (.exr)
-│       │   │   ├── visual_mesh_depth/      # visualization (.jpg)
-│       │   │   └── visual_pointcloud_depth/# visualization (.jpg)
-│       │   ├── mask/               # masks (.jpg)
-│       │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
-│       │   └── poses/              # camera poses (.txt)
-│       ├── Outdoor_002/
-│       └── ...
+│   ├── Indoor_xxx/
+│   │   ├── rgb/                # panoramic RGB images (.jpg)
+│   │   ├── depth/              # depth maps (.exr)
+│   │   ├── mask/               # masks (.jpg)
+│   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
+│   │   └── poses/              # camera poses (.txt)
+│   ├── Indoor_xxx/
+│   ├── Outdoor_xxx/
+│   │   ├── rgb/                # panoramic RGB images (.jpg)
+│   │   ├── depth/
+│   │   │   ├── mesh_depth/             # depth maps (.exr)
+│   │   │   ├── pointcloud_depth/       # depth maps (.exr)
+│   │   │   ├── visual_mesh_depth/      # visualization (.jpg)
+│   │   │   └── visual_pointcloud_depth/# visualization (.jpg)
+│   │   ├── mask/               # masks (.jpg)
+│   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
+│   │   └── poses/              # camera poses (.txt)
+│   ├── Outdoor_xxx/
+│   └── ...
 └── test/
-    ├── Indoor_scenes/
-    │   ├── Indoor_xxx/
-    │   │   ├── rgb/
-    │   │   ├── depth/
-    │   │   ├── mask/
-    │   │   ├── rgb_mask/
-    │   │   └── poses/
-    │   └── ...
-    └── Outdoor_scenes/
-        ├── Outdoor_xxx/
-        │   ├── rgb/
-        │   ├── depth/
-        │   │   ├── mesh_depth/
-        │   │   ├── pointcloud_depth/
-        │   │   ├── visual_mesh_depth/
-        │   │   └── visual_pointcloud_depth/
-        │   ├── mask/
-        │   ├── rgb_mask/
-        │   └── poses/
-        └── ...
+    ├── Indoor_xxx/
+    │   ├── rgb/
+    │   ├── depth/
+    │   ├── mask/
+    │   ├── rgb_mask/
+    │   └── poses/
+    ├── Indoor_xxx/
+    ├── Outdoor_xxx/
+    │   ├── rgb/
+    │   ├── depth/
+    │   │   ├── mesh_depth/
+    │   │   ├── pointcloud_depth/
+    │   │   ├── visual_mesh_depth/
+    │   │   └── visual_pointcloud_depth/
+    │   ├── mask/
+    │   ├── rgb_mask/
+    │   └── poses/
+    ├── Outdoor_xxx/
+    └── ...
 ```
 
 Notes:
@@ -96,14 +88,6 @@ Detailed download links and full-package release plan are **to be released**.
 Loading scripts and official preprocessing/evaluation pipeline are **to be released**.
 
 A minimal usage example (placeholder) will be provided in future updates.
-
-## 📊 Benchmark
-
-Benchmark details, protocols, and baseline checkpoints are **to be released**.
-
-For methodology and current experimental results, please refer to the paper:
-- [Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for
-Advancing Panoramic 3D Reconstruction and Beyond](https://arxiv.org/abs/2604.22482)
 
 ## 📬 Contact
 
