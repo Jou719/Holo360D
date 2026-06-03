@@ -4,8 +4,7 @@
   <a href="https://arxiv.org/abs/2604.22482"><img src="https://img.shields.io/badge/Project%20Page-To%20be%20released-5745BB?logo=google-chrome&logoColor=white"></a> &ensp;
   <a href="https://arxiv.org/pdf/2604.22482"><img src="https://img.shields.io/static/v1?label=Paper&message=arXiv&color=red&logo=arxiv"></a> &ensp;
   <a href="https://github.com/Jou719/Holo360D/tree/main"><img src="https://img.shields.io/static/v1?label=Code&message=GitHub&color=blue&logo=github"></a> &ensp;
-  <a href="https://huggingface.co/"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=yellow&logo=huggingface"></a> &ensp;
-  <a href="https://www.modelscope.cn/"><img src="https://img.shields.io/static/v1?label=Dataset&message=ModelScope&color=purple"></a>
+  <a href="https://huggingface.co/datasets/ouou123/Holo360D/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=yellow&logo=huggingface"></a> &ensp;
 </div>
 
 <div align="center">
@@ -13,7 +12,7 @@
 </div>
 
 ## 🎉 NEWS
-- [2026.05.xx] 🔥 We have released a sample subset of the **Holo360D** dataset on Hugging Face, featuring 5 indoor scenes and 1 outdoor scene.
+- [2026.06.03] 🔥 We have released test data of the **Holo360D** dataset on Hugging Face, featuring 13 indoor scenes and 3 outdoor scene.
 
 ---
 
@@ -36,30 +35,50 @@ Below is the current on-disk structure under:
 
 ```text
 Holo360D/
-├── Indoor_scenes/
-│   ├── Indoor_001/
-│   │   ├── rgb/                # panoramic RGB images (.jpg)
-│   │   ├── depth/              # depth maps (.exr)
-│   │   ├── mask/               # masks (.jpg)
-│   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
-│   │   └── poses/              # camera poses (.txt)
-│   ├── Indoor_002/
-│   ├── ...
-│   └── Indoor_056/
-└── Outdoor_scenes/
-    ├── Outdoor_001/
-    │   ├── rgb/                # panoramic RGB images (.jpg)
-    │   ├── depth/
-    │   │   ├── mesh_depth/             # depth maps (.exr)
-    │   │   ├── pointcloud_depth/       # depth maps (.exr)
-    │   │   ├── visual_mesh_depth/      # visualization (.jpg)
-    │   │   └── visual_pointcloud_depth/# visualization (.jpg)
-    │   ├── mask/               # masks (.jpg)
-    │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
-    │   └── poses/              # camera poses (.txt)
-    ├── Outdoor_002/
-    ├── ...
-    └── Outdoor_019/
+├── train/
+│   ├── Indoor_scenes/
+│   │   ├── Indoor_xxx/
+│   │   │   ├── rgb/                # panoramic RGB images (.jpg)
+│   │   │   ├── depth/              # depth maps (.exr)
+│   │   │   ├── mask/               # masks (.jpg)
+│   │   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
+│   │   │   └── poses/              # camera poses (.txt)
+│   │   ├── Indoor_002/
+│   │   └── ...
+│   └── Outdoor_scenes/
+│       ├── Outdoor_xxx/
+│       │   ├── rgb/                # panoramic RGB images (.jpg)
+│       │   ├── depth/
+│       │   │   ├── mesh_depth/             # depth maps (.exr)
+│       │   │   ├── pointcloud_depth/       # depth maps (.exr)
+│       │   │   ├── visual_mesh_depth/      # visualization (.jpg)
+│       │   │   └── visual_pointcloud_depth/# visualization (.jpg)
+│       │   ├── mask/               # masks (.jpg)
+│       │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
+│       │   └── poses/              # camera poses (.txt)
+│       ├── Outdoor_002/
+│       └── ...
+└── test/
+    ├── Indoor_scenes/
+    │   ├── Indoor_xxx/
+    │   │   ├── rgb/
+    │   │   ├── depth/
+    │   │   ├── mask/
+    │   │   ├── rgb_mask/
+    │   │   └── poses/
+    │   └── ...
+    └── Outdoor_scenes/
+        ├── Outdoor_xxx/
+        │   ├── rgb/
+        │   ├── depth/
+        │   │   ├── mesh_depth/
+        │   │   ├── pointcloud_depth/
+        │   │   ├── visual_mesh_depth/
+        │   │   └── visual_pointcloud_depth/
+        │   ├── mask/
+        │   ├── rgb_mask/
+        │   └── poses/
+        └── ...
 ```
 
 Notes:
@@ -69,10 +88,8 @@ Notes:
 
 Detailed download links and full-package release plan are **to be released**.
 
-- Hugging Face: to be released
-- ModelScope: to be released
-- Full dataset package: to be released
-- Checksum / integrity files: to be released
+- [Hugging Face](https://huggingface.co/datasets/ouou123/Holo360D/tree/main)
+- Full dataset: to be released
 
 ## 🚀 Quick Start
 
@@ -85,15 +102,12 @@ A minimal usage example (placeholder) will be provided in future updates.
 Benchmark details, protocols, and baseline checkpoints are **to be released**.
 
 For methodology and current experimental results, please refer to the paper:
-- https://arxiv.org/abs/2604.22482
-
-## 📄 License
-
-License terms are **to be released**.
+- [Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for
+Advancing Panoramic 3D Reconstruction and Beyond](https://arxiv.org/abs/2604.22482)
 
 ## 📬 Contact
 
-Project contact and issue template are **to be released**.
+If you have any other questions, you can open an issue on GitHub or contact us via email at jou719@connect.hkust-gz.edu.cn.
 
 ## Citation
 If you find this dataset useful, please cite our paper.
