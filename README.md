@@ -12,7 +12,7 @@
 </div>
 
 ## 🎉 NEWS
-- [2026.06.03] 🔥 We have released test data of the **Holo360D** dataset on Hugging Face, featuring 13 indoor scenes and 3 outdoor scene.
+- [2026.06.03] 🔥 We have released test data of the **Holo360D** dataset on Hugging Face, featuring 13 indoor scenes and 4 outdoor scene.
 
 ---
 
