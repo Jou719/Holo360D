@@ -1,7 +1,7 @@
 <h1 align="center">Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond</h1>
 
 <div align="center">
-  <a href="https://arxiv.org/abs/2604.22482"><img src="https://img.shields.io/badge/Project%20Page-To%20be%20released-5745BB?logo=google-chrome&logoColor=white"></a> &ensp;
+  <a href="https://jou719.github.io/Holo360D_homepage/"><img src="https://img.shields.io/badge/Project%20Page-To%20be%20released-5745BB?logo=google-chrome&logoColor=white"></a> &ensp;
   <a href="https://arxiv.org/pdf/2604.22482"><img src="https://img.shields.io/static/v1?label=Paper&message=arXiv&color=red&logo=arxiv"></a> &ensp;
   <a href="https://github.com/Jou719/Holo360D/tree/main"><img src="https://img.shields.io/static/v1?label=Code&message=GitHub&color=blue&logo=github"></a> &ensp;
   <a href="https://huggingface.co/datasets/ouou123/Holo360D/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=yellow&logo=huggingface"></a> &ensp;
