@@ -1,0 +1,383 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holo360D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Georgia:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#">Holo360D</a>
+      <div class="topnav">
+        <a href="https://huggingface.co/datasets/ouou123/Holo360D" target="_blank" rel="noopener noreferrer">Dataset</a>
+        <a href="https://github.com/Jou719/Holo360D" target="_blank" rel="noopener noreferrer">Code</a>
+        <a href="https://arxiv.org/abs/2604.22482" target="_blank" rel="noopener noreferrer">Paper</a>
+        <a href="#citation">Citation</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/videos/1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond</h1>
+      <div class="venue-badge">Large-Scale Real-World Panoramic 3D Dataset</div>
+      <p class="corresponding">Panoramic 3D Reconstruction · Continuous Trajectories · Large-Scale Real-World Dataset</p>
+      <div class="cta-row">
+        <a class="btn pink" id="dataset" href="https://huggingface.co/datasets/ouou123/Holo360D" target="_blank" rel="noopener noreferrer">Dataset</a>
+        <a class="btn blue" id="github" href="https://github.com/Jou719/Holo360D" target="_blank" rel="noopener noreferrer">Code</a>
+        <a class="btn green" id="paper" href="https://arxiv.org/abs/2604.22482" target="_blank" rel="noopener noreferrer">Paper</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section demos">
+    <div class="section-head">
+      <h2>Demos</h2>
+      <p>Click thumbnails below to view different scenes.</p>
+    </div>
+
+    <div class="viewer-shell">
+      <div class="viewer-grid">
+        <div class="video-stack">
+          <div class="video-frame">
+            <div class="video-label label-rgb">RGB</div>
+            <div class="video-label label-mask">Valid Mask</div>
+            <div class="video-label label-point">Pointcloud Depth</div>
+            <div class="video-label label-mesh">Mesh Depth</div>
+            <video id="demo-video" class="demo-video" autoplay muted loop playsinline controls>
+              <source src="assets/videos/1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="point-viewer">
+          <div class="loading" id="model-loading">
+            <div class="spinner"></div>
+            Loading 3D model...
+          </div>
+          <canvas id="model-canvas" aria-label="Holo360D 3D model viewer"></canvas>
+          <div class="controls">
+            <button id="reset-view" type="button">Reset View</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-description">
+        Holo360D contains 109,495 panoramas paired with LiDAR-derived ground truth, including precise meshes, point clouds, depth maps, and camera poses.
+      </div>
+    </div>
+
+    <div class="thumbnail-bar">
+      <div class="thumbnail active" data-model="assets/models/1.ply?v=20260615-1" data-video="assets/videos/1.mp4" data-image="assets/images/1.jpg" title="1">
+        <img src="assets/images/1.jpg" alt="Scene 1 thumbnail">
+      </div>
+      <div class="thumbnail" data-model="assets/models/2.ply?v=20260615-2" data-video="assets/videos/2.mp4" data-image="assets/images/2.jpg" title="2">
+        <img src="assets/images/2.jpg" alt="Scene 2 thumbnail">
+      </div>
+      <div class="thumbnail" data-model="assets/models/31.ply?v=20260615-3" data-video="assets/videos/3.mp4" data-image="assets/images/3.jpg" title="3">
+        <img src="assets/images/3.jpg" alt="Scene 3 thumbnail">
+      </div>
+      <div class="thumbnail" data-model="assets/models/41.ply?v=20260615-4" data-video="assets/videos/4.mp4" data-image="assets/images/4.jpg" title="4">
+        <img src="assets/images/4.jpg" alt="Scene 4 thumbnail">
+      </div>
+      <div class="thumbnail" data-model="assets/models/5.ply?v=20260615-5" data-video="assets/videos/5.mp4" data-image="assets/images/5.jpg" title="5">
+        <img src="assets/images/5.jpg" alt="Scene 5 thumbnail">
+      </div>
+    </div>
+  </section>
+
+    <section class="section muted">
+    <h2>Overview</h2>
+    <p class="overview-text">
+      Holo360D is a large-scale real-world panoramic 3D dataset with continuous
+      camera trajectories and accurately aligned high-completeness depth maps.
+      The raw data are collected using a 3D laser scanner coupled with a 360-degree
+      camera, then processed with online/offline SLAM and a panorama-specific
+      post-processing pipeline.
+    </p>
+    <div class="reserve-grid">
+      <div class="reserve-card"><span>109,495</span><p>Panoramas</p></div>
+      <div class="reserve-card"><span>Ground Truth</span><p>Meshes, point clouds, depth maps, and camera poses</p></div>
+    </div>
+
+    <div class="comparison-card">
+      <div class="comparison-head">
+        <p>Holo360D is the only large-scale real-world panoramic dataset that provides accurately aligned high-completeness depth maps and continuous camera trajectories.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="dataset-table comparison-table">
+          <thead>
+            <tr>
+              <th class="method-col">Datasets</th>
+              <th>Indoor</th>
+              <th>Outdoor</th>
+              <th>Continuity</th>
+              <th>Alignment↓</th>
+              <th>Depth Completion↑</th>
+              <th>Scenes</th>
+              <th>Numbers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="method-col">Stanford2D3D</td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-no">×</span></td>
+              <td><span class="mark mark-no">×</span></td>
+              <td>9.45</td>
+              <td>0.72(I)</td>
+              <td>10</td>
+              <td>1,314</td>
+            </tr>
+            <tr>
+              <td class="method-col">Matterport3D</td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-no">×</span></td>
+              <td><span class="mark mark-no">×</span></td>
+              <td>7.99</td>
+              <td>0.62(I)</td>
+              <td><strong>90</strong></td>
+              <td>10,790</td>
+            </tr>
+            <tr>
+              <td class="method-col">Depth360</td>
+              <td><span class="mark mark-no">×</span></td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-yes">✓</span> (N/A)</td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td>30</td>
+              <td>30,000</td>
+            </tr>
+            <tr>
+              <td class="method-col">360Loc</td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-yes">✓</span> (0.49)</td>
+              <td>12.24</td>
+              <td>0.62(I), 0.7(O)</td>
+              <td>4</td>
+              <td>2,244</td>
+            </tr>
+            <tr>
+              <td class="method-col">KITTI-360</td>
+              <td><span class="mark mark-no">×</span></td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-yes">✓</span> (1.01)</td>
+              <td>11.72</td>
+              <td>0.16(O)</td>
+              <td>11</td>
+              <td>83,000</td>
+            </tr>
+            <tr class="ours">
+              <td class="method-col">Holo360D (Ours)</td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-yes">✓</span></td>
+              <td><span class="mark mark-yes">✓</span> (0.29)</td>
+              <td>5.03</td>
+              <td>0.86(I), 0.82(O)</td>
+              <td>75</td>
+              <td>109,495</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section media-section">
+    <div class="figure-grid">
+      <figure class="figure-card">
+        <img src="assets/images/eccv_coverfigure.jpg" alt="Paper cover figure">
+        <figcaption>Holo360D provides large-scale real-world panoramic captures paired with LiDAR-derived geometry, including meshes, point clouds, depth maps, and camera poses.</figcaption>
+      </figure>
+      <figure class="figure-card">
+        <img src="assets/images/depth-comparison.jpg" alt="Depth comparison">
+        <figcaption>Compared with existing panoramic datasets, Holo360D offers more complete and better aligned depth maps for both indoor and outdoor scenes.</figcaption>
+      </figure>
+      <figure class="figure-card">
+        <img src="assets/images/algorithm_comparison.jpg" alt="Algorithm comparison">
+        <figcaption>Fine-tuning feed-forward 3D reconstruction models on Holo360D improves panoramic reconstruction quality and provides stronger geometric supervision.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section muted" id="citation">
+    <h2>Citation</h2>
+    <pre class="citation"><code>@article{ou2026holo360d,
+  title={Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond},
+  author={Ou, Jing and Cao, Zidong and Ren, Yinrui and Li, Zhuoxiao and Zhu, Jinjing and Hua, Tongyan and Zhang, Shuai and Xiong, Hui and Zhao, Wufan},
+  journal={arXiv preprint arXiv:2604.22482},
+  year={2026}
+}</code></pre>
+  </section>
+
+    <script type="module">
+    import * as THREE from 'https://esm.sh/three@0.160.0';
+    import { TrackballControls } from 'https://esm.sh/three@0.160.0/examples/jsm/controls/TrackballControls.js';
+    import { PLYLoader } from 'https://esm.sh/three@0.160.0/examples/jsm/loaders/PLYLoader.js';
+
+    const canvas = document.getElementById('model-canvas');
+    const container = document.querySelector('.point-viewer');
+    const loading = document.getElementById('model-loading');
+    const resetButton = document.getElementById('reset-view');
+    const demoVideo = document.getElementById('demo-video');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xf3f4f6);
+
+    const camera = new THREE.PerspectiveCamera(42, 1, 0.01, 5000);
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const controls = new TrackballControls(camera, renderer.domElement);
+    controls.rotateSpeed = 1.2;
+    controls.zoomSpeed = 2.7;
+    controls.panSpeed = 0.525;
+    controls.staticMoving = true;
+    controls.dynamicDampingFactor = 0;
+    controls.noZoom = false;
+    controls.noPan = false;
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x777777, 1.5));
+    const light = new THREE.DirectionalLight(0xffffff, 1.0);
+    light.position.set(1, 2, 3);
+    scene.add(light);
+    scene.add(new THREE.AxesHelper(2));
+
+    let model = null;
+    let defaultCameraPosition = new THREE.Vector3(0, 0, 4);
+    let defaultTarget = new THREE.Vector3(0, 0, 0);
+    let currentModelCenter = new THREE.Vector3(0, 0, 0);
+    let currentLoadToken = 0;
+
+    function resizeRenderer() {
+      const width = container.clientWidth;
+      const height = Math.max(504, container.clientHeight - 56);
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      controls.handleResize?.();
+    }
+
+    function frameObject(object) {
+      const box = new THREE.Box3().setFromObject(object);
+      const center = new THREE.Vector3();
+      const size = new THREE.Vector3();
+      box.getCenter(center);
+      box.getSize(size);
+
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const distance = maxDim / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov * 0.5)));
+      currentModelCenter.copy(center);
+      defaultTarget.copy(center);
+      defaultCameraPosition.set(
+        center.x - distance * 0.18,
+        center.y - distance * 0.58,
+        center.z + distance * 0.62
+      );
+      camera.position.copy(defaultCameraPosition);
+      controls.target.copy(defaultTarget);
+      controls.update();
+    }
+
+    function buildMesh(geometry) {
+      geometry.computeVertexNormals();
+      const material = new THREE.MeshBasicMaterial({
+        vertexColors: geometry.hasAttribute('color'),
+        side: THREE.DoubleSide
+      });
+      return new THREE.Mesh(geometry, material);
+    }
+
+    function clearModel() {
+      if (!model) return;
+      scene.remove(model);
+      model.geometry?.dispose();
+      model.material?.dispose();
+      model = null;
+    }
+
+    function loadModel(modelUrl) {
+      const loadToken = ++currentLoadToken;
+      clearModel();
+      loading.style.display = 'flex';
+      loading.innerHTML = `<div class="spinner"></div>Loading 3D model...<div style="font-size:12px;opacity:.7;max-width:90%;text-align:center;word-break:break-all;">${modelUrl}</div>`;
+      const loader = new PLYLoader();
+      loader.load(
+        modelUrl,
+        (geometry) => {
+          if (loadToken !== currentLoadToken) return;
+          model = buildMesh(geometry);
+          frameObject(model);
+          scene.add(model);
+          loading.style.display = 'none';
+          console.log('PLY load success:', modelUrl, geometry.attributes.position?.count ?? 0);
+        },
+        (event) => {
+          if (loadToken !== currentLoadToken) return;
+          if (event.total) {
+            const percent = Math.round((event.loaded / event.total) * 100);
+            loading.innerHTML = `<div class="spinner"></div>Loading 3D model... ${percent}%`;
+          }
+        },
+        undefined,
+        (err) => {
+          if (loadToken !== currentLoadToken) return;
+          console.error('PLY load failed:', modelUrl, err);
+          loading.innerHTML = `<div style="text-align:center;max-width:90%;">Failed to load:<br><span style="font-size:12px;word-break:break-all;">${modelUrl}</span><br>Please open this page through a local HTTP server.</div>`;
+        }
+      );
+    }
+
+    function switchVideo(videoUrl) {
+      if (!videoUrl || demoVideo.currentSrc.endsWith(videoUrl)) return;
+      demoVideo.src = videoUrl;
+      demoVideo.load();
+      demoVideo.play().catch(() => {});
+    }
+
+    const thumbs = document.querySelectorAll('.thumbnail');
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        thumbs.forEach((t) => t.classList.remove('active'));
+        thumb.classList.add('active');
+        const modelUrl = thumb.dataset.model;
+        const videoUrl = thumb.dataset.video;
+        switchVideo(videoUrl);
+        if (modelUrl) {
+          loadModel(modelUrl);
+        }
+      });
+    });
+
+    resetButton.addEventListener('click', () => {
+      camera.position.copy(defaultCameraPosition);
+      controls.target.copy(currentModelCenter);
+      controls.up.set(0, 1, 0);
+      controls.update();
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    window.addEventListener('resize', resizeRenderer);
+    resizeRenderer();
+    const activeThumb = document.querySelector('.thumbnail.active');
+    switchVideo(activeThumb.dataset.video);
+    loadModel(activeThumb.dataset.model);
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
+
