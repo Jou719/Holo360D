@@ -12,6 +12,7 @@
 </div>
 
 ## 🎉 NEWS
+- [2026.06.18] 🎉 Holo360D has been accepted by ECCV 2026.
 - [2026.06.03] 🔥 We have released test data of the **Holo360D** dataset on Hugging Face, featuring 13 indoor scenes and 4 outdoor scene.
 
 ---
@@ -20,7 +21,7 @@
 
 While feed-forward 3D reconstruction models have advanced rapidly, they still suffer from notable performance degradation on panoramic inputs due to spherical distortions. Existing panoramic datasets are also mostly captured at discrete camera positions, which limits support for continuous multi-view trajectory learning.
 
-**Holo360D** is introduced to address these limitations. According to the paper, it contains **10w+ panoramas** with aligned geometry annotations, and is designed to support panoramic 3D reconstruction research with continuous trajectories in real-world scenes.
+**Holo360D** is introduced to address these limitations. According to the paper, it contains **100k+ panoramas** with aligned geometry annotations, and is designed to support panoramic 3D reconstruction research with continuous trajectories in real-world scenes.
 
 Key characteristics (from the paper):
 - Large-scale real-world 360 panorama dataset.
