@@ -12,6 +12,7 @@
 </div>
 
 ## 🎉 NEWS
+- [2026.06.27] 🔥 We have released all data of the **Holo360D** dataset on Hugging Face, featuring 56 indoor scenes and 19 outdoor scene.
 - [2026.06.18] 🎉 Holo360D has been accepted by ECCV 2026.
 - [2026.06.03] 🔥 We have released test data of the **Holo360D** dataset on Hugging Face, featuring 13 indoor scenes and 4 outdoor scene.
 
@@ -86,7 +87,6 @@ Notes:
 Detailed download links and full-package release plan are **to be released**.
 
 - [Hugging Face](https://huggingface.co/datasets/ouou123/Holo360D/tree/main)
-- Full dataset: to be released
 
 ## 🚀 Quick Start
 
