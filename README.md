@@ -36,8 +36,11 @@ Holo360D/
 │   ├── Indoor_xxx/
 │   │   ├── rgb/                # panoramic RGB images (.jpg)
 │   │   ├── depth/              # depth maps (.exr)
+│   │   │   ├── mesh_depth/             # depth maps (.exr)
+│   │   │   ├── pointcloud_depth/       # depth maps (.exr)
+│   │   │   ├── visual_mesh_depth/      # visualization (.jpg)
+│   │   │   └── visual_pointcloud_depth/# visualization (.jpg)
 │   │   ├── mask/               # masks (.jpg)
-│   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
 │   │   └── poses/              # camera poses (.txt)
 │   ├── Indoor_xxx/
 │   ├── Outdoor_xxx/
@@ -48,7 +51,6 @@ Holo360D/
 │   │   │   ├── visual_mesh_depth/      # visualization (.jpg)
 │   │   │   └── visual_pointcloud_depth/# visualization (.jpg)
 │   │   ├── mask/               # masks (.jpg)
-│   │   ├── rgb_mask/           # RGB-masked panoramas (.jpg)
 │   │   └── poses/              # camera poses (.txt)
 │   ├── Outdoor_xxx/
 │   └── ...
@@ -56,8 +58,11 @@ Holo360D/
     ├── Indoor_xxx/
     │   ├── rgb/
     │   ├── depth/
+    │   │   ├── mesh_depth/             # depth maps (.exr)
+    │   │   ├── pointcloud_depth/       # depth maps (.exr)
+    │   │   ├── visual_mesh_depth/      # visualization (.jpg)
+    │   │   └── visual_pointcloud_depth/# visualization (.jpg)
     │   ├── mask/
-    │   ├── rgb_mask/
     │   └── poses/
     ├── Indoor_xxx/
     ├── Outdoor_xxx/
@@ -68,7 +73,6 @@ Holo360D/
     │   │   ├── visual_mesh_depth/
     │   │   └── visual_pointcloud_depth/
     │   ├── mask/
-    │   ├── rgb_mask/
     │   └── poses/
     ├── Outdoor_xxx/
     └── ...
