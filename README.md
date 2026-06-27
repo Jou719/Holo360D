@@ -1,4 +1,4 @@
-<h1 align="center">Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond</h1>
+<h1 align="center">[ECCV 2026] Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond</h1>
 
 <div align="center">
   <a href="https://jou719.github.io/Holo360D_homepage/"><img src="https://img.shields.io/badge/Project%20Page-5745BB?logo=google-chrome&logoColor=white"></a> &ensp;
