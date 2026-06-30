@@ -1,0 +1,19 @@
+# Core dependencies for Pi3 360_inference
+numpy
+torch>=2.0
+opencv-python
+Pillow
+open3d
+onnxruntime
+safetensors
+requests
+scipy
+tqdm
+huggingface_hub
+
+# Local package
+-e utils3d/
+
+# Optional: uncomment if you need visualization / GLB export
+# viser
+# trimesh
