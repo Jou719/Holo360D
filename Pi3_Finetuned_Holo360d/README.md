@@ -2,6 +2,23 @@
 
 This repository provides the Pi3 panorama reconstruction inference pipeline together with demo scripts for panorama-to-point-cloud reconstruction.
 
+## Reconstruction Examples
+
+<p align="center">
+  <img src="assets/page_iamges/single.jpg" alt="Single-panorama 3D reconstruction result" width="38%" />
+  <img src="assets/page_iamges/multi.jpg" alt="Multi-panorama 3D reconstruction result" width="58%" />
+</p>
+
+<p align="center">
+  <em>Left: single-panorama reconstruction. Right: multi-panorama reconstruction.</em>
+</p>
+
+## Checkpoints
+
+Pretrained checkpoints are available on Hugging Face:
+
+[ouou123/Holo360D ckpt](https://huggingface.co/datasets/ouou123/Holo360D/tree/main/ckpt)
+
 ## Installation
 
 ```bash
@@ -23,6 +40,11 @@ We provide two panorama splitting variants:
   The pose estimation of this split strategy is the most stable, and the views complement each other well enough to provide full coverage across multiple panoramas.
 - Use the `10views` model for single-view panorama reconstruction.
   This setup is designed for reconstructing a single panorama and does not rely on estimating poses across multiple panoramas.
+
+## Demo Scripts
+
+- `360_inference_8views.bash`: example script for the 8-view pipeline.
+- `360_inference_10view.bash`: example script for the 10-view pipeline.
 
 ## Inference
 
@@ -61,34 +83,10 @@ The sample folders include both:
 
 For custom data, only `rgb` is required. The `mask` input is optional.
 
-## Demo Scripts
-
-- `360_inference_8views.bash`: example script for the 8-view pipeline.
-- `360_inference_10view.bash`: example script for the 10-view pipeline.
-- `demo_gradio.bash`: launches the Gradio visualization demo.
-
 ## Output
 
-The inference pipeline saves:
+The inference pipeline saves the following outputs under `./ply_outputs`:
 
 - merged point cloud
 - camera poses
-
-The Gradio demo visualizes the merged point cloud and one representative split-view pose for each panorama.
-
-## Repository Structure
-
-```text
-.
-??? 360_inference.py
-??? 360_inference_8views.bash
-??? 360_inference_10view.bash
-??? demo_gradio.py
-??? demo_gradio.bash
-??? visual_util.py
-??? requirements.txt
-??? datasets/
-??? pi3/
-??? utils3d/
-```
 
