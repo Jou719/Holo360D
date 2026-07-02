@@ -21,15 +21,17 @@
 
 ## ✨ Overview
 
-While feed-forward 3D reconstruction models have advanced rapidly, they still suffer from notable performance degradation on panoramic inputs due to spherical distortions. Existing panoramic datasets are also mostly captured at discrete camera positions, which limits support for continuous multi-view trajectory learning.
-
-**Holo360D** is introduced to address these limitations. According to the paper, it contains **100k+ panoramas** with aligned geometry annotations, and is designed to support panoramic 3D reconstruction research with continuous trajectories in real-world scenes.
+We present Holo360D, the first large-scale real-world panoramic 3D dataset, containing 109,495 panoramas paired with LiDAR-derived ground truth, including precise meshes, point clouds, depth maps, and camera poses. More importantly, Holo360D is the first panoramic dataset to offer accurately aligned high-completeness depth
+maps with continuous camera trajectories over long sequences.
 
 Key characteristics (from the paper):
-- Large-scale real-world 360 panorama dataset.
+- Large-scale real-world 360 panorama 3D dataset.
 - Continuous trajectory capture for multi-view settings.
-- Accurately aligned high-completeness depth maps for panoramic 3D learning.
+- Accurately aligned high-completeness depth maps for training and testing.
 - A benchmark setup for model fine-tuning and evaluation.
+
+## 🔮 Inference
+We have released the inference code and checkpoint for fine-tuned Pi3 on the Holo360D ([click here](https://github.com/Jou719/Holo360D/tree/main/Pi3_Finetuned_Holo360d))
 
 ## 📦 Dataset Structure
 ```
@@ -88,15 +90,6 @@ Notes:
 Detailed download links and full-package release plan are **to be released**.
 
 - [Hugging Face](https://huggingface.co/datasets/ouou123/Holo360D/tree/main)
-
-## 🚀 Quick Start
-
-Loading scripts and official preprocessing/evaluation pipeline are **to be released**.
-
-A minimal usage example (placeholder) will be provided in future updates.
-
-## 🔮 Inference
-We have released the inference code and checkpoint for fine-tuned Pi3 on the Holo360D ([click here](https://github.com/Jou719/Holo360D/tree/main/Pi3_Finetuned_Holo360d))
 
 ## 📬 Contact
 
