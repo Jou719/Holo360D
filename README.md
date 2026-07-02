@@ -21,7 +21,7 @@
 
 ## ✨ Overview
 
-We present Holo360D, the first large-scale real-world panoramic 3D dataset, containing 109,495 panoramas paired with LiDAR-derived ground truth, including precise meshes, point clouds, depth maps, and camera poses. More importantly, Holo360D is the first panoramic dataset to offer accurately aligned high-completeness depth
+We present Holo360D, the first large-scale real-world panoramic 3D dataset, containing 109,495 panoramas paired with LiDAR-derived ground truth, including precise meshes, point clouds, depth maps, and camera poses. More importantly, Holo360D is the first panoramic dataset to offer accurately aligned high-completeness depth
 maps with continuous camera trajectories over long sequences.
 
 Key characteristics (from the paper):
