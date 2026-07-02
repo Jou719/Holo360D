@@ -14,7 +14,7 @@
 ## 🎉 NEWS
 - [2026.07.01] 🔥 We have released the inference code for **fine-tuned Pi3** on the Holo360D, which supports both **single-view and multi-view panoramic 3D reconstruction**.
 - [2026.06.27] 🔥 We have released all data of the **Holo360D** dataset on Hugging Face, featuring 56 indoor scenes and 19 outdoor scene.
-- [2026.06.18] 🎉 Holo360D has been accepted by ECCV 2026.
+- [2026.06.18] 🎉 **Holo360D** has been accepted by ECCV 2026.
 - [2026.06.03] 🔥 We have released test data of the **Holo360D** dataset on Hugging Face, featuring 13 indoor scenes and 4 outdoor scene.
 
 ---
@@ -94,6 +94,9 @@ Detailed download links and full-package release plan are **to be released**.
 Loading scripts and official preprocessing/evaluation pipeline are **to be released**.
 
 A minimal usage example (placeholder) will be provided in future updates.
+
+## 🔮 Inference
+We have released the inference code and checkpoint for fine-tuned Pi3 on the Holo360D ([click here](https://github.com/Jou719/Holo360D/tree/main/Pi3_Finetuned_Holo360d))
 
 ## 📬 Contact
 
